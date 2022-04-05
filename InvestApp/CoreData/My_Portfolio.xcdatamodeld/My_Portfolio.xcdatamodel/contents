@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Company" representedClassName="Company" syncable="YES" codeGenerationType="class">
+        <attribute name="currentStockPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="industry" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="ticker" optional="YES" attributeType="String"/>
+        <relationship name="stockBatches" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StockBatch" inverseName="company" inverseEntity="StockBatch"/>
+    </entity>
+    <entity name="Portfolio" representedClassName="Portfolio" syncable="YES" codeGenerationType="class">
+        <attribute name="cash" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="stockBatches" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StockBatch" inverseName="portfolio" inverseEntity="StockBatch"/>
+    </entity>
+    <entity name="StockBatch" representedClassName="StockBatch" syncable="YES" codeGenerationType="class">
+        <attribute name="buyingPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="numberOfStocks" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company" inverseName="stockBatches" inverseEntity="Company"/>
+        <relationship name="portfolio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Portfolio" inverseName="stockBatches" inverseEntity="Portfolio"/>
+    </entity>
+    <elements>
+        <element name="Company" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="Portfolio" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="StockBatch" positionX="-36" positionY="9" width="128" height="119"/>
+    </elements>
+</model>
