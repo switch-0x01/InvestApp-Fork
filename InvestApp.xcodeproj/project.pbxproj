@@ -943,7 +943,7 @@
 				DEVELOPMENT_TEAM = 6343C72SQK;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "My Portfolio/Supports/Info.plist";
+				INFOPLIST_FILE = InvestApp/Supports/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = InvestApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -975,7 +975,7 @@
 				DEVELOPMENT_TEAM = 6343C72SQK;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "My Portfolio/Supports/Info.plist";
+				INFOPLIST_FILE = InvestApp/Supports/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = InvestApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
